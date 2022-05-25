@@ -1,0 +1,51 @@
+
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/cart-items/ -d "{\"product_name\":\"mangoes\",\"product_price\":\"55\",\"product_quantity\":\"1\"}"
+
+
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/cart-items/ -d "{\"product_name\":\"apples\",\"product_price\":\"80\",\"product_quantity\":\"10\"}"
+
+
+curl -X GET http://127.0.0.1:8000/cart-items/
+
+curl -X PATCH http://127.0.0.1:8000/update-item/2 -d "{\"product_quantity\":\"57\"}"
+
+curl -X PATCH http://127.0.0.1:8000/update-item/5 -d "{\"product_name\":\"NewZealandKiwis\"}"
+
+curl -X "DELETE" http://127.0.0.1:8000/update-item/7
+------------------------------------------------------------------------
+
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/user-details/ -d "{\"name\":\"Baneswar\",\"email\":\"bmishra@gmail.com\",\"password\":\"baneswar1\"}"
+
+
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/user-details/ -d "{\"name\":\"Sagar\",\"email\":\"sagar@gmail.com\",\"password\":\"sagar1\"}"
+
+
+curl -X PATCH http://127.0.0.1:8000/update-user-details/2 -d "{\"name\":\"Sagar\"}"
+
+ curl -X GET http://127.0.0.1:8000/user-details/
+
+
+curl -X "DELETE" http://127.0.0.1:8000/update-user-details/2
+----------------------------------------------------------------------------
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/seller-details/ -d "{\"phone\":\"123456789\",\"zipcode\":\"754000\",\"company_name\":\"GMS\"}"
+
+curl -X "DELETE" http://127.0.0.1:8000/update-seller-details/3
+
+curl -X GET http://127.0.0.1:8000/seller-details/
+
+curl -X PATCH http://127.0.0.1:8000/update-seller-details/1 -d "{\"zipcode\":\"999888\"}"
+
+-----------------------------------------------------------------------------------------
+
+curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8000/warehouse-details/ -d "{\"city\":\"VZG\",\"number\":\"003\"}"
+
+
+curl -X GET http://127.0.0.1:8000/warehouse-details/
+
+
+curl -X PATCH http://127.0.0.1:8000/update-warehouse-details/1 -d "{\"city\":\"SCRANTON\"}"
+
+curl -X PATCH http://127.0.0.1:8000/update-warehouse-details/4 -d "{\"city\":\"PHL\"}"
+
+
+curl -X "DELETE" http://127.0.0.1:8000/update-warehouse-details/4
